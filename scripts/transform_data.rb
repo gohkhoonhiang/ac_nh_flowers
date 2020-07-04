@@ -38,7 +38,7 @@ end
 # Raw data: {"type"=>"Roses", "gene"=>{"code"=>"RR-yy-WW-Ss", "alleles"=>{"red"=>["R","R"], "yellow"=>["y","y"], "white"=>["W","W"], "shade"=>["S","s"]}}, "color"=>"Red", "name"=>"Seed red", "parent_1"=>nil, "parent_2"=>nil, "chance"=>nil}
 #
 # will be converted to:
-# Formatted data: {"type"=>"Roses", "gene"=>{"code"=>"RR-yy-WW-Ss", "alleles"=>{"red"=>["R","R"], "yellow"=>["y","y"], "white"=>["W","W"], "shade"=>["S","s"]}}, "color"=>"Red", "name"=>"Seed red", "parent_1"=>nil, "parent_2"=>nil, "chance"=>nil}
+# Formatted data: {"type"=>"Roses", "gene"=>{"code"=>"RR-yy-WW-Ss", "alleles"=>{"red"=>["R","R"], "yellow"=>["y","y"], "white"=>["W","W"], "shade"=>["S","s"]}}, "color"=>"Red", "name"=>"Seed red", "parent_1"=>{}, "parent_2"=>{}, "chance"=>nil}
 #
 # Raw data: {"type"=>"Roses", "gene"=>{"code"=>"Rr-Yy-WW-ss", "alleles"=>{"red"=>["R","r"], "yellow"=>["Y","y"], "white"=>["W","W"], "shade"=>["s","s"]}}, "color"=>"Orange", "name"=>"Orange", "parent_1"=>{"red"=>["R","R"], "yellow"=>["y","y"], "white"=>["W","W"], "shade"=["S","s"]}, "parent_2"=>{"red"=>["r","r"], "yellow"=>["Y","Y"], "white"=>["W","W"], "shade"=>["s","s"]}, "chance"=>0.5}
 #
@@ -54,9 +54,13 @@ end
 def format_row(rows, row)
   if row['parent_1']
     row['parent_1'] = find_parent(rows, row, 'parent_1')
+  else
+    row['parent_1'] = {}
   end
   if row['parent_2']
     row['parent_2'] = find_parent(rows, row, 'parent_2')
+  else
+    row['parent_2'] = {}
   end
 end
 
