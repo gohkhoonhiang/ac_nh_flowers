@@ -38,12 +38,12 @@ end
 # Raw data: {"type"=>"Roses", "gene"=>{"code"=>"RR-yy-WW-Ss", "alleles"=>{"red"=>["R","R"], "yellow"=>["y","y"], "white"=>["W","W"], "shade"=>["S","s"]}}, "color"=>"Red", "name"=>"Seed red", "parent_1"=>nil, "parent_2"=>nil, "chance"=>nil}
 #
 # will be converted to:
-# Formatted data: {"type"=>"Roses", "gene"=>{"code"=>"RR-yy-WW-Ss", "alleles"=>{"red"=>["R","R"], "yellow"=>["y","y"], "white"=>["W","W"], "shade"=>["S","s"]}}, "color"=>"Red", "name"=>"Seed red", "parent_1"=>{}, "parent_2"=>{}, "chance"=>nil}
+# Formatted data: {"key"=>"roses_seed_red_RR-yy-WW-Ss__", "type"=>"Roses", "gene"=>{"code"=>"RR-yy-WW-Ss", "alleles"=>{"red"=>["R","R"], "yellow"=>["y","y"], "white"=>["W","W"], "shade"=>["S","s"]}}, "color"=>"Red", "name"=>"Seed red", "parent_1"=>{}, "parent_2"=>{}, "chance"=>nil}
 #
 # Raw data: {"type"=>"Roses", "gene"=>{"code"=>"Rr-Yy-WW-ss", "alleles"=>{"red"=>["R","r"], "yellow"=>["Y","y"], "white"=>["W","W"], "shade"=>["s","s"]}}, "color"=>"Orange", "name"=>"Orange", "parent_1"=>{"red"=>["R","R"], "yellow"=>["y","y"], "white"=>["W","W"], "shade"=["S","s"]}, "parent_2"=>{"red"=>["r","r"], "yellow"=>["Y","Y"], "white"=>["W","W"], "shade"=>["s","s"]}, "chance"=>0.5}
 #
 # will be converted to:
-# Formatted data: {"type"=>"Roses", "gene"=>{"code"=>"Rr-Yy-WW-ss", "alleles"=>{"red"=>["R","r"], "yellow"=>["Y","y"], "white"=>["W","W"], "shade"=>["s","s"]}}, "color"=>"Orange", "name"=>"Orange", "parent_1"=>{"name"=>"Red", "gene"=>{"code"=>"RR-yy-WW-Ss", "alleles"=>{"red"=>["R","R"], "yellow"=>["y","y"], "white"=>["W","W"], "shade"=["S","s"]}}}, "parent_2"=>{"name"=>"Yellow", "gene"=>{"code"=>"rr-YY-WW-ss", "alleles"=>{"red"=>["r","r"], "yellow"=>["Y","Y"], "white"=>["W","W"], "shade"=>["s","s"]}}}, "chance"=>0.5}
+# Formatted data: {"key"=>"roses_orange_Rr-Yy-WW-ss_RR-yy-WW-Ss_rr-YY-WW-ss", "type"=>"Roses", "gene"=>{"code"=>"Rr-Yy-WW-ss", "alleles"=>{"red"=>["R","r"], "yellow"=>["Y","y"], "white"=>["W","W"], "shade"=>["s","s"]}}, "color"=>"Orange", "name"=>"Orange", "parent_1"=>{"name"=>"Red", "gene"=>{"code"=>"RR-yy-WW-Ss", "alleles"=>{"red"=>["R","R"], "yellow"=>["y","y"], "white"=>["W","W"], "shade"=["S","s"]}}}, "parent_2"=>{"name"=>"Yellow", "gene"=>{"code"=>"rr-YY-WW-ss", "alleles"=>{"red"=>["r","r"], "yellow"=>["Y","Y"], "white"=>["W","W"], "shade"=>["s","s"]}}}, "chance"=>0.5}
 def format_rows(rows)
   rows.each do |row|
     format_row(rows, row)
@@ -62,6 +62,7 @@ def format_row(rows, row)
   else
     row['parent_2'] = {}
   end
+  row['key'] = "#{snake_case(row['type'])}_#{snake_case(row['name'])}_#{row.dig('gene', 'code')}_#{row.dig('parent_1', 'gene', 'code')}_#{row.dig('parent_2', 'gene', 'code')}"
 end
 
 def snake_case(s)
