@@ -6,7 +6,7 @@ InvalidFileFormat = Class.new(StandardError)
 def write_to_file(input, output)
   formatted_data = format_data(input)
 
-  File.write(output, { data: formatted_data.sort_by { |row| row["name"] } }.to_json)
+  File.write(output, { data: formatted_data.sort_by { |row| [row['type'], row["name"]] } }.to_json)
 end
 
 # example
