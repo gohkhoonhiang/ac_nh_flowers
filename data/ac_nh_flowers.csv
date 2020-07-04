@@ -16,9 +16,9 @@ Roses,RR-yy-ww-SS,Pink,Mystery island pink,-,-,-
 Roses,RR-YY-ww-ss,Blue,Blue,RR-YY-Ww-Ss,RR-YY-Ww-Ss,0.0625
 Roses,RR-YY-ww-Ss,Red,Special red,RR-YY-Ww-Ss,RR-YY-Ww-Ss,0.125
 Roses,RR-YY-ww-ss,Blue,Blue,RR-YY-ww-Ss,RR-YY-ww-Ss,0.25
-Cosmos,RR-yy-ss,Red,Red,-,-,-
-Cosmos,rr-YY-Ss,Yellow,Yellow,-,-,-
-Cosmos,rr-yy-Ss,White,White,-,-,-
+Cosmos,RR-yy-ss,Red,Seed red,-,-,-
+Cosmos,rr-YY-Ss,Yellow,Seed yellow,-,-,-
+Cosmos,rr-yy-Ss,White,Seed white,-,-,-
 Cosmos,Rr-Yy-Ss,Orange,Orange,RR-yy-ss,rr-YY-Ss,1
 Cosmos,Rr-Yy-ss,Orange,Orange,RR-yy-ss,rr-YY-Ss,1
 Cosmos,Rr-yy-Ss,Pink,Pink,RR-yy-ss,rr-yy-Ss,1
@@ -30,9 +30,9 @@ Cosmos,RR-Yy-Ss,Orange,Mystery island orange,-,-,-
 Cosmos,Rr-Yy-SS,Pink,Mystery island pink,-,-,-
 Cosmos,RR-YY-Ss,Black,Black,RR-Yy-Ss,RR-Yy-Ss,0.1875
 Cosmos,RR-YY-ss,Black,Black,RR-Yy-Ss,RR-Yy-Ss,0.1875
-Lilies,RR-yy-Ss,Red,Red,-,-,-
-Lilies,rr-YY-ss,Yellow,Yellow,-,-,-
-Lilies,rr-yy-SS,White,White,-,-,-
+Lilies,RR-yy-Ss,Red,Seed red,-,-,-
+Lilies,rr-YY-ss,Yellow,Seed yellow,-,-,-
+Lilies,rr-yy-SS,White,Seed white,-,-,-
 Lilies,Rr-Yy-ss,Orange,Orange,RR-yy-Ss,rr-YY-ss,0.5
 Lilies,RR-yy-ss,Black,Black,RR-yy-Ss,RR-yy-Ss,0.25
 Lilies,RR-yy-SS,Pink,Pink,RR-yy-Ss,RR-yy-Ss,0.25
@@ -40,9 +40,9 @@ Lilies,Rr-yy-Ss,Pink,Pink,RR-yy-Ss,rr-yy-SS,0.5
 Lilies,RR-YY-Ss,Orange,Mystery island orange,-,-,-
 Lilies,RR-Yy-SS,Pink,Mystery island pink,-,-,-
 Lilies,RR-Yy-ss,Black,Mystery island black,-,-,-
-Pansies,RR-yy-WW,Red,Red,-,-,-
-Pansies,rr-YY-WW,Yellow,Yellow,-,-,-
-Pansies,rr-yy-Ww,White,White,-,-,-
+Pansies,RR-yy-WW,Red,Seed red,-,-,-
+Pansies,rr-YY-WW,Yellow,Seed yellow,-,-,-
+Pansies,rr-yy-Ww,White,Seed white,-,-,-
 Pansies,Rr-Yy-WW,Orange,Orange,RR-yy-WW,rr-YY-WW,1
 Pansies,rr-yy-ww,Blue,Blue,rr-yy-Ww,rr-yy-Ww,0.25
 Pansies,Rr-yy-Ww,Red,Hybrid red,RR-yy-WW,rr-yy-ww,1
@@ -52,9 +52,9 @@ Pansies,Rr-yy-ww,Blue,Mystery island blue,-,-,-
 Pansies,RR-yy-ww,Purple,Purple,Rr-yy-ww,Rr-yy-ww,0.25
 Pansies,RR-YY-ww,Purple,Purple,RR-YY-Ww,RR-YY-Ww,0.25
 Pansies,RR-Yy-ww,Purple,Purple,Rr-yy-ww,RR-YY-Ww,0.25
-Tulips,RR-yy-Ss,Red,Red,-,-,-
-Tulips,rr-YY-ss,Yellow,Yellow,-,-,-
-Tulips,rr-yy-Ss,White,White,-,-,-
+Tulips,RR-yy-Ss,Red,Seed red,-,-,-
+Tulips,rr-YY-ss,Yellow,Seed yellow,-,-,-
+Tulips,rr-yy-Ss,White,Seed white,-,-,-
 Tulips,Rr-Yy-ss,Orange,Orange,RR-yy-Ss,rr-YY-ss,0.5
 Tulips,RR-yy-ss,Black,Black,RR-yy-Ss,RR-yy-Ss,0.25
 Tulips,Rr-yy-Ss,Pink,Pink,RR-yy-Ss,rr-yy-Ss,0.5
@@ -65,9 +65,9 @@ Tulips,RR-Yy-ss,Black,Mystery island black,-,-,-
 Tulips,RR-YY-ss,Purple,Purple,RR-Yy-ss,RR-Yy-ss,0.25
 Tulips,RR-YY-ss,Purple,Purple,Rr-YY-ss,Rr-YY-ss,0.25
 Tulips,RR-YY-ss,Purple,Purple,RR-Yy-ss,Rr-YY-ss,0.25
-Hyacinths,RR-yy-Ww,Red,Red,-,-,-
-Hyacinths,rr-YY-WW,Yellow,Yellow,-,-,-
-Hyacinths,rr-yy-Ww,White,White,-,-,-
+Hyacinths,RR-yy-Ww,Red,Seed red,-,-,-
+Hyacinths,rr-YY-WW,Yellow,Seed yellow,-,-,-
+Hyacinths,rr-yy-Ww,White,Seed white,-,-,-
 Hyacinths,Rr-Yy-WW,Orange,Orange,RR-yy-Ww,rr-YY-WW,0.5
 Hyacinths,Rr-yy-Ww,Pink,Pink,RR-yy-Ww,rr-yy-Ww,0.5
 Hyacinths,rr-yy-ww,Blue,Blue,rr-yy-Ww,rr-yy-Ww,0.25
@@ -79,9 +79,9 @@ Hyacinths,Rr-YY-WW,Orange,Mystery island orange,-,-,-
 Hyacinths,RR-YY-WW,Purple,Purple,RR-Yy-WW,RR-Yy-WW,0.25
 Hyacinths,RR-YY-WW,Purple,Purple,Rr-YY-WW,Rr-YY-WW,0.25
 Hyacinths,RR-YY-WW,Purple,Purple,RR-Yy-WW,Rr-YY-WW,0.25
-Mums,RR-yy-WW,Red,Red,-,-,-
-Mums,rr-YY-WW,Yellow,Yellow,-,-,-
-Mums,rr-yy-Ww,White,White,-,-,-
+Mums,RR-yy-WW,Red,Seed red,-,-,-
+Mums,rr-YY-WW,Yellow,Seed yellow,-,-,-
+Mums,rr-yy-Ww,White,Seed white,-,-,-
 Mums,Rr-yy-WW,Pink,Pink,RR-yy-WW,rr-yy-Ww,1
 Mums,Rr-yy-Ww,Pink,Pink,RR-yy-WW,rr-yy-Ww,1
 Mums,rr-yy-ww,Purple,Purple,rr-yy-Ww,rr-yy-Ww,0.25
@@ -97,9 +97,9 @@ Mums,RR-Yy-Ww,Purple,Mystery island purple,-,-,-
 Mums,RR-YY-WW,Green,Green,RR-Yy-Ww,RR-Yy-Ww,0.1875
 Mums,RR-YY-Ww,Green,Green,RR-Yy-Ww,RR-Yy-Ww,0.1875
 Mums,RR-YY-Ww,Green,Green,RR-Yy-Ww,Rr-Yy-ww,0.0625
-Windflowers,RR-oo-WW,Red,Red,-,-,-
-Windflowers,rr-OO-WW,Orange,Orange,-,-,-
-Windflowers,rr-oo-Ww,White,White,-,-,-
+Windflowers,RR-oo-WW,Red,Seed red,-,-,-
+Windflowers,rr-OO-WW,Orange,Seed orange,-,-,-
+Windflowers,rr-oo-Ww,White,Seed white,-,-,-
 Windflowers,Rr-Oo-WW,Pink,Pink,RR-oo-WW,rr-OO-WW,1
 Windflowers,rr-oo-ww,Blue,Blue,rr-oo-Ww,rr-oo-Ww,0.25
 Windflowers,Rr-oo-Ww,Red,Hybrid red,RR-oo-WW,rr-oo-ww,1
