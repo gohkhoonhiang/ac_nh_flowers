@@ -92,10 +92,201 @@
             show-arrows
           >
 
+            <v-tab key="flower_tab">
+              Flowers
+              <v-icon left>mdi-flower</v-icon>
+            </v-tab>
             <v-tab key="help_tab">
               Help
               <v-icon left>mdi-help</v-icon>
             </v-tab>
+
+            <v-tab-item key="flower_tab">
+              <v-card flat>
+                <v-tabs
+                  show-arrows
+                >
+                  <v-tab v-for="flower_type in Object.keys(flower_by_type_data)" :key="flower_type + '_flower_tab'">
+                    {{ flower_type }}
+                    <v-icon left>mdi-view-list</v-icon>
+                  </v-tab>
+                  <v-tab key="complete_flower_tab">
+                    Complete
+                    <v-icon left>mdi-view-list</v-icon>
+                  </v-tab>
+
+                  <v-tab-item v-for="flower_type in Object.keys(flower_by_type_data)" :key="flower_type + '_flower_tab'">
+                    <v-card flat>
+                      <v-data-table
+                        :headers="simple_flower_headers"
+                        :items="flower_by_type_data[flower_type]"
+                        class="elevation-1 invert"
+                        dense
+                        disable-pagination
+                        hide-default-footer
+                      >
+
+                        <template v-slot:item.parent_1="{ item }">
+                          <div v-if="Object.keys(item.parent_1).length > 0">
+                            <v-icon v-if="item.parent_1.name.match(/red/i) !== null" left color="red">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_1.name.match(/yellow/i) !== null" left color="yellow">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_1.name.match(/white/i) !== null" left color="white">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_1.name.match(/black/i) !== null" left color="black">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_1.name.match(/orange/i) !== null" left color="orange">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_1.name.match(/pink/i) !== null" left color="pink">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_1.name.match(/blue/i) !== null" left color="blue">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_1.name.match(/green/i) !== null" left color="green">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_1.name.match(/purple/i) !== null" left color="purple">mdi-flower</v-icon>
+                            <span>{{ item.parent_1.name }}</span>
+                          </div>
+                          <div v-else>
+                            -
+                          </div>
+                        </template>
+
+                        <template v-slot:item.parent_2="{ item }">
+                          <div v-if="Object.keys(item.parent_2).length > 0">
+                            <v-icon v-if="item.parent_2.name.match(/red/i) !== null" left color="red">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_2.name.match(/yellow/i) !== null" left color="yellow">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_2.name.match(/white/i) !== null" left color="white">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_2.name.match(/black/i) !== null" left color="black">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_2.name.match(/orange/i) !== null" left color="orange">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_2.name.match(/pink/i) !== null" left color="pink">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_2.name.match(/blue/i) !== null" left color="blue">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_2.name.match(/green/i) !== null" left color="green">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_2.name.match(/purple/i) !== null" left color="purple">mdi-flower</v-icon>
+                            <span>{{ item.parent_2.name }}</span>
+                          </div>
+                          <div v-else>
+                            -
+                          </div>
+                        </template>
+
+                        <template v-slot:item.name="{ item }">
+                          <v-icon v-if="item.name.match(/red/i) !== null" left color="red">mdi-flower</v-icon>
+                          <v-icon v-else-if="item.name.match(/yellow/i) !== null" left color="yellow">mdi-flower</v-icon>
+                          <v-icon v-else-if="item.name.match(/white/i) !== null" left color="white">mdi-flower</v-icon>
+                          <v-icon v-else-if="item.name.match(/black/i) !== null" left color="black">mdi-flower</v-icon>
+                          <v-icon v-else-if="item.name.match(/orange/i) !== null" left color="orange">mdi-flower</v-icon>
+                          <v-icon v-else-if="item.name.match(/pink/i) !== null" left color="pink">mdi-flower</v-icon>
+                          <v-icon v-else-if="item.name.match(/blue/i) !== null" left color="blue">mdi-flower</v-icon>
+                          <v-icon v-else-if="item.name.match(/green/i) !== null" left color="green">mdi-flower</v-icon>
+                          <v-icon v-else-if="item.name.match(/purple/i) !== null" left color="purple">mdi-flower</v-icon>
+                          <span>{{ item.name }}</span>
+                        </template>
+
+                        <template v-slot:item.chance="{ item }">
+                          <div v-if="item.chance">
+                            {{ item.chance * 100 }} %
+                          </div>
+                          <div v-else>
+                            N/A
+                          </div>
+                        </template>
+
+                      </v-data-table>
+                    </v-card>
+                  </v-tab-item>
+
+                  <v-tab-item key="complete_flower_tab">
+                    <v-card flat>
+                      <v-data-table
+                        :headers="flower_headers"
+                        :items="flower_data"
+                        class="elevation-1 invert"
+                        item-key="key"
+                        disable-pagination
+                        hide-default-footer
+                        :single-expand="complete_list_row_single_expand"
+                        :expanded.sync="complete_list_row_expanded"
+                        show-expand
+                      >
+
+                        <template v-slot:item.parent_1="{ item }">
+                          <div v-if="Object.keys(item.parent_1).length > 0">
+                            <v-icon v-if="item.parent_1.name.match(/red/i) !== null" left color="red">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_1.name.match(/yellow/i) !== null" left color="yellow">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_1.name.match(/white/i) !== null" left color="white">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_1.name.match(/black/i) !== null" left color="black">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_1.name.match(/orange/i) !== null" left color="orange">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_1.name.match(/pink/i) !== null" left color="pink">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_1.name.match(/blue/i) !== null" left color="blue">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_1.name.match(/green/i) !== null" left color="green">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_1.name.match(/purple/i) !== null" left color="purple">mdi-flower</v-icon>
+                            <span>{{ item.parent_1.name }}</span>
+                          </div>
+                          <div v-else>
+                            -
+                          </div>
+                        </template>
+
+                        <template v-slot:item.parent_2="{ item }">
+                          <div v-if="Object.keys(item.parent_2).length > 0">
+                            <v-icon v-if="item.parent_2.name.match(/red/i) !== null" left color="red">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_2.name.match(/yellow/i) !== null" left color="yellow">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_2.name.match(/white/i) !== null" left color="white">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_2.name.match(/black/i) !== null" left color="black">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_2.name.match(/orange/i) !== null" left color="orange">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_2.name.match(/pink/i) !== null" left color="pink">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_2.name.match(/blue/i) !== null" left color="blue">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_2.name.match(/green/i) !== null" left color="green">mdi-flower</v-icon>
+                            <v-icon v-else-if="item.parent_2.name.match(/purple/i) !== null" left color="purple">mdi-flower</v-icon>
+                            <span>{{ item.parent_2.name }}</span>
+                          </div>
+                          <div v-else>
+                            -
+                          </div>
+                        </template>
+
+                        <template v-slot:item.name="{ item }">
+                          <v-icon v-if="item.name.match(/red/i) !== null" left color="red">mdi-flower</v-icon>
+                          <v-icon v-else-if="item.name.match(/yellow/i) !== null" left color="yellow">mdi-flower</v-icon>
+                          <v-icon v-else-if="item.name.match(/white/i) !== null" left color="white">mdi-flower</v-icon>
+                          <v-icon v-else-if="item.name.match(/black/i) !== null" left color="black">mdi-flower</v-icon>
+                          <v-icon v-else-if="item.name.match(/orange/i) !== null" left color="orange">mdi-flower</v-icon>
+                          <v-icon v-else-if="item.name.match(/pink/i) !== null" left color="pink">mdi-flower</v-icon>
+                          <v-icon v-else-if="item.name.match(/blue/i) !== null" left color="blue">mdi-flower</v-icon>
+                          <v-icon v-else-if="item.name.match(/green/i) !== null" left color="green">mdi-flower</v-icon>
+                          <v-icon v-else-if="item.name.match(/purple/i) !== null" left color="purple">mdi-flower</v-icon>
+                          <span>{{ item.name }}</span>
+                        </template>
+
+                        <template v-slot:item.gene="{ item }">
+                          {{ item.gene.code }}
+                        </template>
+
+                        <template v-slot:item.chance="{ item }">
+                          <div v-if="item.chance">
+                            {{ item.chance * 100 }} %
+                          </div>
+                          <div v-else>
+                            N/A
+                          </div>
+                        </template>
+
+                        <template v-slot:expanded-item="{ headers, item }">
+                          <td :colspan="headers.length">
+                            <v-card
+                              color="rgba(255, 255, 255, 0)"
+                              flat
+                            >
+                              <v-card-title>Genetics:</v-card-title>
+                              <v-card-text v-if="Object.keys(item.parent_1).length > 0">
+                                <div>{{ item.parent_1.gene.code }}</div> +
+                                <div>{{ item.parent_2.gene.code }}</div> =
+                                <div>{{ item.gene.code }}</div>
+                              </v-card-text>
+                              <v-card-text v-else>N/A</v-card-text>
+                            </v-card>
+                          </td>
+                        </template>
+
+                    </v-card>
+                  </v-tab-item>
+
+                </v-tabs>
+              </v-card>
+            </v-tab-item>
 
             <v-tab-item key="help_tab">
               <v-card flat>

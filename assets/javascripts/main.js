@@ -1,4 +1,4 @@
-var latest_data_version = 'c2eef2b';
+var latest_data_version = '1fb788e';
 
 var month_names = [
   "Jan",
@@ -13,6 +13,17 @@ var month_names = [
   "Oct",
   "Nov",
   "Dec"
+];
+
+var flower_types = [
+  'Roses',
+  'Cosmos',
+  'Lilies',
+  'Pansies',
+  'Tulips',
+  'Hyacinths',
+  'Mums',
+  'Windflowers',
 ];
 
 var generateDate = function(time_value) {
@@ -54,6 +65,7 @@ var app = new Vue({
           toolbar: '#f5f8fe',
           font: '#837865',
           error: '#e76e60',
+          invert: '#eee',
         },
       },
     },
@@ -61,6 +73,10 @@ var app = new Vue({
 
   created() {
     this.retrieveSettings();
+    if (this.data_version !== latest_data_version) {
+      this.getFlowerData();
+      this.data_version = latest_data_version;
+    }
     interval = setInterval(() => this.now = new Date(), 1000);
   },
 
@@ -72,7 +88,9 @@ var app = new Vue({
     data_version: null,
 
     flower_data: [],
+    flower_by_type_data: {},
     flower_headers: [
+      { text: 'Type', filterable: false, value: 'type' },
       {
         text: 'Name',
         align: 'start',
@@ -80,14 +98,27 @@ var app = new Vue({
         filterable: true,
         value: 'name',
       },
-      { text: 'Price', filterable: false, value: 'price', filterable: false },
-      { text: 'Location', filterable: false, value: 'location' },
-      { text: 'Shadow Size', filterable: false, value: 'shadow_size' },
-      { text: 'Time Range', filterable: false, value: 'time' },
-      { text: 'Months', filterable: false, value: 'month_names' },
-      { text: 'Hemisphere', filterable: false, value: 'hemisphere' },
-      { text: 'Donated?', filterable: false, value: 'donated' },
+      { text: 'Color', filterable: false, value: 'color' },
+      { text: 'Parent 1', filterable: false, value: 'parent_1' },
+      { text: 'Parent 2', filterable: false, value: 'parent_2' },
+      { text: 'Chance %', filterable: false, value: 'chance' },
     ],
+
+    simple_flower_headers: [
+      {
+        text: 'Name',
+        align: 'start',
+        sortable: true,
+        filterable: true,
+        value: 'name',
+      },
+      { text: 'Parent 1', filterable: false, value: 'parent_1' },
+      { text: 'Parent 2', filterable: false, value: 'parent_2' },
+      { text: 'Chance %', filterable: false, value: 'chance' },
+    ],
+
+    complete_list_row_expanded: [],
+    complete_list_row_single_expand: true,
 
   },
 
@@ -95,7 +126,7 @@ var app = new Vue({
     getFlowerData: function() {
       var vm = this;
       $.ajax({
-        url: 'https://raw.githubusercontent.com/gohkhoonhiang/ac_nh_flowers/master/data/combined_flower.json',
+        url: 'https://raw.githubusercontent.com/gohkhoonhiang/ac_nh_flowers/master/data/complete_flower.json',
         method: 'GET'
       }).then(function (data) {
         var flower_data = JSON.parse(data).data;
@@ -105,6 +136,16 @@ var app = new Vue({
         });
 
         vm.flower_data = formatted_data;
+        flower_types.forEach(function(type) {
+          vm.flower_by_type_data[type] = vm.filterByType(type);
+        });
+      });
+    },
+
+    filterByType: function(flower_type) {
+      var vm = this;
+      return vm.flower_data.filter(function(flower) {
+        return flower.type === flower_type;
       });
     },
 
@@ -123,6 +164,7 @@ var app = new Vue({
       var settings = {
         data_version: vm.data_version,
         flower_data: vm.flower_data,
+        flower_by_type_data: vm.flower_by_type_data,
       };
 
       localStorage.setItem('ac_nh_flowers_settings', JSON.stringify(settings));
@@ -140,6 +182,16 @@ var app = new Vue({
       if (new_val !== old_val) {
         vm.storeSettings();
       }
+    },
+
+    flower_data: function(new_val, old_val) {
+      var vm = this;
+      vm.storeSettings();
+    },
+
+    flower_by_type_data: function(new_val, old_val) {
+      var vm = this;
+      vm.storeSettings();
     },
 
   },
