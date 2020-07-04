@@ -1,0 +1,118 @@
+Type,Gene,Color,Name,Parent 1,Parent 2,Chance
+Roses,RR-yy-WW-Ss,Red,Seed red,-,-,-
+Roses,rr-YY-WW-ss,Yellow,Seed yellow,-,-,-
+Roses,rr-yy-Ww-ss,White,Seed white,-,-,-
+Roses,Rr-Yy-WW-ss,Orange,Orange,RR-yy-WW-Ss,rr-YY-WW-ss,0.5
+Roses,RR-yy-WW-ss,Black,Black,RR-yy-WW-Ss,RR-yy-WW-Ss,0.25
+Roses,Rr-yy-WW-SS,Pink,Pink,RR-yy-WW-Ss,RR-yy-WW-Ss,0.25
+Roses,Rr-yy-WW-Ss,Pink,Pink,RR-yy-WW-Ss,rr-yy-Ww-ss,0.5
+Roses,Rr-yy-Ww-Ss,Pink,Pink,RR-yy-WW-Ss,rr-yy-Ww-ss,0.5
+Roses,rr-yy-ww-ss,Purple,Purple,rr-yy-Ww-ss,rr-yy-Ww-ss,0.25
+Roses,Rr-Yy-WW-ss,Orange,Orange,RR-yy-WW-ss,rr-YY-WW-ss,1
+Roses,Rr-Yy-Ww-ss,Red,Hybrid red,Rr-Yy-WW-ss,rr-yy-ww-ss,0.25
+Roses,RR-YY-ww-ss,Blue,Blue,Rr-Yy-Ww-ss,Rr-Yy-Ww-ss,0.015625
+Roses,RR-YY-Ww-Ss,Orange,Mystery island orange,-,-,-
+Roses,RR-yy-ww-SS,Pink,Mystery island pink,-,-,-
+Roses,RR-YY-ww-ss,Blue,Blue,RR-YY-Ww-Ss,RR-YY-Ww-Ss,0.0625
+Roses,RR-YY-ww-Ss,Red,Special red,RR-YY-Ww-Ss,RR-YY-Ww-Ss,0.125
+Roses,RR-YY-ww-ss,Blue,Blue,RR-YY-ww-Ss,RR-YY-ww-Ss,0.25
+Cosmos,RR-yy-ss,Red,Red,-,-,-
+Cosmos,rr-YY-Ss,Yellow,Yellow,-,-,-
+Cosmos,rr-yy-Ss,White,White,-,-,-
+Cosmos,Rr-Yy-Ss,Orange,Orange,RR-yy-ss,rr-YY-Ss,1
+Cosmos,Rr-Yy-ss,Orange,Orange,RR-yy-ss,rr-YY-Ss,1
+Cosmos,Rr-yy-Ss,Pink,Pink,RR-yy-ss,rr-yy-Ss,1
+Cosmos,Rr-yy-ss,Pink,Pink,RR-yy-ss,rr-yy-Ss,1
+Cosmos,RR-YY-Ss,Black,Black,Rr-Yy-Ss,Rr-Yy-Ss,0.0625
+Cosmos,RR-YY-Ss,Black,Black,Rr-Yy-Ss,Rr-Yy-ss,0.0625
+Cosmos,RR-YY-Ss,Black,Black,Rr-Yy-ss,Rr-Yy-ss,0.0625
+Cosmos,RR-Yy-Ss,Orange,Mystery island orange,-,-,-
+Cosmos,Rr-Yy-SS,Pink,Mystery island pink,-,-,-
+Cosmos,RR-YY-Ss,Black,Black,RR-Yy-Ss,RR-Yy-Ss,0.1875
+Cosmos,RR-YY-ss,Black,Black,RR-Yy-Ss,RR-Yy-Ss,0.1875
+Lilies,RR-yy-Ss,Red,Red,-,-,-
+Lilies,rr-YY-ss,Yellow,Yellow,-,-,-
+Lilies,rr-yy-SS,White,White,-,-,-
+Lilies,Rr-Yy-ss,Orange,Orange,RR-yy-Ss,rr-YY-ss,0.5
+Lilies,RR-yy-ss,Black,Black,RR-yy-Ss,RR-yy-Ss,0.25
+Lilies,RR-yy-SS,Pink,Pink,RR-yy-Ss,RR-yy-Ss,0.25
+Lilies,Rr-yy-Ss,Pink,Pink,RR-yy-Ss,rr-yy-SS,0.5
+Lilies,RR-YY-Ss,Orange,Mystery island orange,-,-,-
+Lilies,RR-Yy-SS,Pink,Mystery island pink,-,-,-
+Lilies,RR-Yy-ss,Black,Mystery island black,-,-,-
+Pansies,RR-yy-WW,Red,Red,-,-,-
+Pansies,rr-YY-WW,Yellow,Yellow,-,-,-
+Pansies,rr-yy-Ww,White,White,-,-,-
+Pansies,Rr-Yy-WW,Orange,Orange,RR-yy-WW,rr-YY-WW,1
+Pansies,rr-yy-ww,Blue,Blue,rr-yy-Ww,rr-yy-Ww,0.25
+Pansies,Rr-yy-Ww,Red,Hybrid red,RR-yy-WW,rr-yy-ww,1
+Pansies,RR-yy-ww,Purple,Purple,Rr-yy-Ww,Rr-yy-Ww,0.0625
+Pansies,RR-YY-Ww,Orange,Mystery island orange,-,-,-
+Pansies,Rr-yy-ww,Blue,Mystery island blue,-,-,-
+Pansies,RR-yy-ww,Purple,Purple,Rr-yy-ww,Rr-yy-ww,0.25
+Pansies,RR-YY-ww,Purple,Purple,RR-YY-Ww,RR-YY-Ww,0.25
+Pansies,RR-Yy-ww,Purple,Purple,Rr-yy-ww,RR-YY-Ww,0.25
+Tulips,RR-yy-Ss,Red,Red,-,-,-
+Tulips,rr-YY-ss,Yellow,Yellow,-,-,-
+Tulips,rr-yy-Ss,White,White,-,-,-
+Tulips,Rr-Yy-ss,Orange,Orange,RR-yy-Ss,rr-YY-ss,0.5
+Tulips,RR-yy-ss,Black,Black,RR-yy-Ss,RR-yy-Ss,0.25
+Tulips,Rr-yy-Ss,Pink,Pink,RR-yy-Ss,rr-yy-Ss,0.5
+Tulips,RR-YY-ss,Purple,Purple,Rr-Yy-ss,Rr-Yy-ss,0.0625
+Tulips,Rr-yy-Ss,Pink,Mystery island pink,-,-,-
+Tulips,Rr-YY-ss,Orange,Mystery island orange,-,-,-
+Tulips,RR-Yy-ss,Black,Mystery island black,-,-,-
+Tulips,RR-YY-ss,Purple,Purple,RR-Yy-ss,RR-Yy-ss,0.25
+Tulips,RR-YY-ss,Purple,Purple,Rr-YY-ss,Rr-YY-ss,0.25
+Tulips,RR-YY-ss,Purple,Purple,RR-Yy-ss,Rr-YY-ss,0.25
+Hyacinths,RR-yy-Ww,Red,Red,-,-,-
+Hyacinths,rr-YY-WW,Yellow,Yellow,-,-,-
+Hyacinths,rr-yy-Ww,White,White,-,-,-
+Hyacinths,Rr-Yy-WW,Orange,Orange,RR-yy-Ww,rr-YY-WW,0.5
+Hyacinths,Rr-yy-Ww,Pink,Pink,RR-yy-Ww,rr-yy-Ww,0.5
+Hyacinths,rr-yy-ww,Blue,Blue,rr-yy-Ww,rr-yy-Ww,0.25
+Hyacinths,RR-YY-WW,Purple,Purple,Rr-Yy-WW,Rr-Yy-WW,0.0625
+Hyacinths,RR-Yy-WW,Blue,Special blue,Rr-Yy-WW,Rr-Yy-WW,0.125
+Hyacinths,RR-Yy-WW,Blue,Mystery island blue,-,-,-
+Hyacinths,Rr-yy-Ww,Pink,Mystery island pink,-,-,-
+Hyacinths,Rr-YY-WW,Orange,Mystery island orange,-,-,-
+Hyacinths,RR-YY-WW,Purple,Purple,RR-Yy-WW,RR-Yy-WW,0.25
+Hyacinths,RR-YY-WW,Purple,Purple,Rr-YY-WW,Rr-YY-WW,0.25
+Hyacinths,RR-YY-WW,Purple,Purple,RR-Yy-WW,Rr-YY-WW,0.25
+Mums,RR-yy-WW,Red,Red,-,-,-
+Mums,rr-YY-WW,Yellow,Yellow,-,-,-
+Mums,rr-yy-Ww,White,White,-,-,-
+Mums,Rr-yy-WW,Pink,Pink,RR-yy-WW,rr-yy-Ww,1
+Mums,Rr-yy-Ww,Pink,Pink,RR-yy-WW,rr-yy-Ww,1
+Mums,rr-yy-ww,Purple,Purple,rr-yy-Ww,rr-yy-Ww,0.25
+Mums,Rr-Yy-WW,Yellow,Hybrid yellow,RR-yy-WW,rr-YY-WW,1
+Mums,RR-YY-WW,Green,Green,Rr-Yy-WW,Rr-Yy-WW,0.0625
+Mums,RR-Yy-WW,Purple,Special purple,Rr-Yy-WW,Rr-Yy-WW,0.25
+Mums,Rr-YY-WW,Purple,Special purple,Rr-Yy-WW,Rr-Yy-WW,0.25
+Mums,RR-YY-WW,Green,Green,RR-Yy-WW,RR-Yy-WW,0.25
+Mums,RR-YY-WW,Green,Green,RR-Yy-WW,Rr-YY-WW,0.25
+Mums,RR-YY-WW,Green,Green,Rr-YY-WW,Rr-YY-WW,0.25
+Mums,Rr-Yy-ww,Pink,Mystery island pink,-,-,-
+Mums,RR-Yy-Ww,Purple,Mystery island purple,-,-,-
+Mums,RR-YY-WW,Green,Green,RR-Yy-Ww,RR-Yy-Ww,0.1875
+Mums,RR-YY-Ww,Green,Green,RR-Yy-Ww,RR-Yy-Ww,0.1875
+Mums,RR-YY-Ww,Green,Green,RR-Yy-Ww,Rr-Yy-ww,0.0625
+Windflowers,RR-oo-WW,Red,Red,-,-,-
+Windflowers,rr-OO-WW,Orange,Orange,-,-,-
+Windflowers,rr-oo-Ww,White,White,-,-,-
+Windflowers,Rr-Oo-WW,Pink,Pink,RR-oo-WW,rr-OO-WW,1
+Windflowers,rr-oo-ww,Blue,Blue,rr-oo-Ww,rr-oo-Ww,0.25
+Windflowers,Rr-oo-Ww,Red,Hybrid red,RR-oo-WW,rr-oo-ww,1
+Windflowers,Rr-Oo-Ww,Pink,Special pink,Rr-Oo-WW,rr-oo-ww,0.25
+Windflowers,Rr-oo-Ww,Red,Hybrid red,Rr-Oo-WW,rr-oo-ww,0.25
+Windflowers,RR-oo-ww,Purple,Purple,Rr-oo-Ww,Rr-oo-Ww,0.0625
+Windflowers,RR-OO-ww,Purple,Purple,Rr-Oo-Ww,Rr-Oo-Ww,0.0625
+Windflowers,RR-Oo-ww,Purple,Purple,Rr-Oo-Ww,Rr-Oo-Ww,0.0625
+Windflowers,RR-oo-ww,Purple,Purple,Rr-Oo-Ww,Rr-Oo-Ww,0.0625
+Windflowers,RR-Oo-ww,Purple,Purple,Rr-Oo-Ww,Rr-oo-Ww,0.0625
+Windflowers,RR-oo-ww,Purple,Purple,Rr-Oo-Ww,Rr-oo-Ww,0.0625
+Windflowers,RR-OO-Ww,Pink,Mystery island pink,-,-,-
+Windflowers,Rr-oo-ww,Blue,Mystery island blue,-,-,-
+Windflowers,RR-OO-ww,Purple,Purple,RR-OO-Ww,RR-OO-Ww,0.25
+Windflowers,RR-oo-ww,Purple,Purple,Rr-oo-ww,Rr-oo-ww,0.25
+Windflowers,RR-Oo-ww,Purple,Purple,Rr-oo-ww,RR-OO-Ww,0.25
